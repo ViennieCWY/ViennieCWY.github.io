@@ -1,6 +1,7 @@
 let elLocate = document.getElementById("btnlocate")
 elLocate.addEventListener("click",function(){
- 
+
+    
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(function(position){
             let elLat = document.getElementById("lat")
@@ -8,7 +9,7 @@ elLocate.addEventListener("click",function(){
             elLat.innerHTML = "Latitude: " + position.coords.latitude
             elLong.innerHTML = "Longitude: " + position.coords.longitude
         })
-    } else{
+    } else {
         alert("Geolocation is not supported")
     }
 }) 
